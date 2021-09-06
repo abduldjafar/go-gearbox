@@ -29,6 +29,7 @@ func (*middleware) Logger(gearboxCtx gearbox.Context) {
 		end.Sub(begin),
 		ctx.UserAgent(),
 	)
+
 	// Next is what allows the request to continue to the next
 	// middleware/handler
 	gearboxCtx.Next()
@@ -43,3 +44,5 @@ func getHttp(ctx *fasthttp.RequestCtx) string {
 	}
 	return "HTTP/1.0"
 }
+
+// logger code from : https://github.com/AubSs/fasthttplogger

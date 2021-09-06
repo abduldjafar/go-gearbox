@@ -1,0 +1,9 @@
+package entity
+
+type User struct {
+	Name      string `json:"name"`
+	Email     string `json:"email"`
+	Password  string `json:"password"`
+	BirthDate string `json:"birth_date"`
+	Address   string `json:"address"`
+}
